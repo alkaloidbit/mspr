@@ -1,0 +1,39 @@
+{
+  "width": 652,
+  "height": 402,
+  "cx": [
+    [ "client", 82 ],
+    [ "passer", 229 ],
+    [ "commande", 384 ],
+    [ "constituer", 553 ],
+    [ "produit", 229 ],
+    [ "concerner", 384 ],
+    [ "detail_commande", 553 ],
+    [ "utilisateur", 82 ],
+    [ "endosser", 229 ],
+    [ "role", 384 ]
+  ],
+  "cy": [
+    [ "client", 89 ],
+    [ "passer", 89 ],
+    [ "commande", 89 ],
+    [ "constituer", 89 ],
+    [ "produit", 201 ],
+    [ "concerner", 201 ],
+    [ "detail_commande", 201 ],
+    [ "utilisateur", 340 ],
+    [ "endosser", 340 ],
+    [ "role", 340 ]
+  ],
+  "shift": [
+    [ "passer,client,0", 0 ],
+    [ "passer,commande,0", 0 ],
+    [ "constituer,detail_commande,0", 0 ],
+    [ "constituer,commande,0", 0 ],
+    [ "concerner,produit,0", 0 ],
+    [ "concerner,detail_commande,0", 0 ],
+    [ "endosser,utilisateur,0", 0 ],
+    [ "endosser,role,0", 0 ]
+  ],
+  "ratio": []
+}

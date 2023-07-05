@@ -1,0 +1,68 @@
+<html>
+<head>
+<meta charset='utf-8'>
+<style>
+  #mld .relation { font-variant: small-caps; font-weight: bold }
+  #mld .primary { text-decoration: underline }
+  #mld .foreign { font-style: oblique }
+  #mld .normal { }
+</style>
+</head>
+<body>
+<div id='mld'>
+<div>
+  <span class='relation'>client</span> (
+    <span class='primary'>code_client</span>,
+    <span class='normal'>nom</span>,
+    <span class='normal'>prenom</span>,
+    <span class='normal'>adresse</span>,
+    <span class='normal'>code_postal</span>,
+    <span class='normal'>ville</span>,
+    <span class='normal'>stimestamp</span>
+  )
+</div>
+<div>
+  <span class='relation'>commande</span> (
+    <span class='primary'>code_commande</span>,
+    <span class='normal'>stimestamp</span>,
+    <span class='foreign'>#code_client</span>,
+    <span class='normal'>date_commande</span>
+  )
+</div>
+<div>
+  <span class='relation'>detail_commande</span> (
+    <span class='primary'>code_detail_commande</span>,
+    <span class='normal'>quantite</span>,
+    <span class='normal'>stimestamp</span>,
+    <span class='foreign'>#code_commande</span>,
+    <span class='foreign'>#code_produit</span>
+  )
+</div>
+<div>
+  <span class='relation'>produit</span> (
+    <span class='primary'>code_produit</span>,
+    <span class='normal'>libelle</span>,
+    <span class='normal'>description</span>,
+    <span class='normal'>prix</span>,
+    <span class='normal'>stimestamp</span>
+  )
+</div>
+<div>
+  <span class='relation'>role</span> (
+    <span class='primary'>code_role</span>,
+    <span class='normal'>libelle</span>,
+    <span class='normal'>stimestamp</span>
+  )
+</div>
+<div>
+  <span class='relation'>utilisateur</span> (
+    <span class='primary'>code_utilisateur</span>,
+    <span class='normal'>email</span>,
+    <span class='normal'>password</span>,
+    <span class='normal'>stimestamp</span>,
+    <span class='foreign'>#code_role</span>
+  )
+</div>
+</div>
+</body>
+</html>

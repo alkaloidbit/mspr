@@ -1,0 +1,15 @@
+client: code_client [int(11)], nom [varchar(50)], prenom [varchar(50)], adresse [varchar(250)], code_postal [int(5)], ville [VARCHAR(50)], stimestamp [TIMESTAMP DEFAULT CURRENT_DATE()]
+passer, 1N client, 11 commande:date_commande [DATE()]
+commande: code_commande [int(11)], stimestamp [TIMESTAMP DEFAULT CURRENT_DATE()]
+constituer, 11 detail_commande, 1N commande
+
+:
+produit: code_produit [int(11)], libelle [varchar(50)],  description [text], prix [int(11)], stimestamp [TIMESTAMP DEFAULT CURRENT_DATE()]
+concerner, 0N produit, 11 detail_commande
+detail_commande: code_detail_commande [int(11)], quantite [int(6)], stimestamp [TIMESTAMP DEFAULT CURRENT_DATE()]
+
+utilisateur: code_utilisateur [int(11)], email [varchar(50)], password [varchar(50)], stimestamp [TIMESTAMP DEFAULT CURRENT_DATE()]
+endosser, 11 utilisateur, 1N role
+role: code_role [int(11)], libelle [varchar(50)], stimestamp [TIMESTAMP DEFAULT CURRENT_DATE()]
+
+
