@@ -1,11 +1,3 @@
-/**
- * 
- */
-/**
- * @author Jérôme
- *
- */
-module Bibliothèque {
+module default package {
 	requires java.sql;
-	requires java.desktop;
 }
